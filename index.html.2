@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<title>Untuk Cinter ❤️</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ffd1e8,#fff0f6);
+    font-family:Arial;
+    overflow:hidden;
+}
+
+.card{
+    background:white;
+    padding:40px;
+    max-width:600px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    z-index:2;
+}
+
+h1{
+    color:#ff4d88;
+    margin-bottom:10px;
+}
+
+p{
+    color:#444;
+    line-height:1.7;
+    font-size:16px;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 20px;
+    border:none;
+    border-radius:25px;
+    background:#ff6fa5;
+    color:white;
+    cursor:pointer;
+    font-size:15px;
+}
+
+button:hover{
+    background:#ff4d88;
+}
+
+#msg{
+    margin-top:15px;
+    color:#ff4d88;
+    font-weight:bold;
+}
+
+.heart{
+    position:absolute;
+    top:-10px;
+    color:#ff7aa8;
+    animation:fall linear infinite;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>Untuk Cinter ❤️</h1>
+
+    <p>Hai cinter...</p>
+
+    <p>
+    Maaf kalau saya pernah buat awak sedih.
+    Saya tak sempurna, tapi saya betul-betul hargai awak.
+    </p>
+
+    <p>
+    Awak orang yang penting dalam hidup saya.
+    Saya tak nak hilang awak.
+    </p>
+
+    <button onclick="show()">Tekan sini ❤️</button>
+
+    <div id="msg"></div>
+</div>
+
+<script>
+function show(){
+document.getElementById("msg").innerHTML =
+"Saya sayang awak, cinter ❤️ Maafkan saya ya...";
+}
+
+// jatuhkan hati
+for(let i=0;i<25;i++){
+    let h=document.createElement("div");
+    h.classList.add("heart");
+    h.innerHTML="❤";
+    h.style.left=Math.random()*100+"vw";
+    h.style.animationDuration=(3+Math.random()*5)+"s";
+    h.style.fontSize=(15+Math.random()*20)+"px";
+    document.body.appendChild(h);
+}
+</script>
+
+</body>
+</html>
