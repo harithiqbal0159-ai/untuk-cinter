@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Cinter ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(180deg,#ffd6e7,#fff0f6);
+    font-family:Arial,sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.card{
+    width:90%;
+    max-width:700px;
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    z-index:10;
+}
+
+h1{
+    color:#ff4d88;
+    margin-bottom:20px;
+}
+
+p{
+    font-size:18px;
+    line-height:1.8;
+    color:#444;
+    margin-bottom:15px;
+}
+
+button{
+    background:#ff6fa5;
+    color:white;
+    border:none;
+    padding:15px 25px;
+    border-radius:30px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+#message{
+    margin-top:20px;
+    color:#ff4d88;
+    font-weight:bold;
+}
+
+.heart{
+    position:absolute;
+    top:-50px;
+    color:#ff7aa8;
+    font-size:24px;
+    animation:fall linear infinite;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>Untuk Cinter ❤️</h1>
+
+    <p>
+    Hai cinter,
+    </p>
+
+    <p>
+    Saya buat laman kecil ni khas untuk awak sebab saya nak minta maaf dengan seikhlas hati.
+    </p>
+
+    <p>
+    Saya tahu saya dah buat awak sedih. Bila saya fikir semula, saya menyesal sebab tindakan saya dah melukakan hati awak.
+    </p>
+
+    <p>
+    Awak sangat bermakna untuk saya, dan perkara terakhir yang saya nak ialah melihat awak menangis atau bersedih kerana saya.
+    </p>
+
+    <button onclick="showMessage()">
+        Tekan Sini ❤️
+    </button>
+
+    <p id="message"></p>
+</div>
+
+<script>
+function showMessage(){
+document.getElementById("message").innerHTML =
+"Cinter, saya betul-betul minta maaf. Saya sayang awak dan saya akan cuba jadi lebih baik setiap hari. ❤️";
+}
+
+for(let i=0;i<30;i++){
+    let heart=document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML="❤";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.animationDuration=(5+Math.random()*5)+"s";
+    heart.style.opacity=Math.random();
+    document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
